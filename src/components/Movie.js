@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const movieCardStyle = {
-  width: "100%",
+  width: "400px",
   padding: "1em",
   border: "1px solid #ddd",
   borderRadius: "4px",
@@ -9,7 +9,6 @@ const movieCardStyle = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  transition: "all 0.3s ease-in-out",
   margin: "0 0 10px 10px",
 };
 
@@ -28,17 +27,18 @@ const movieTitleStyle = {
 
 const movieDetailsStyle = {
   fontSize: "1em",
-  textAlign: "center",
   color: "#333",
+  margin: "1em 0",
+  textAlign: "center",
 };
 
 const Movie = ({ movie, onRemove }) => (
   <div style={movieCardStyle} key={movie.imdbID}>
     <Link to={`/${movie.imdbID}`}>
       <img src={movie.Poster} alt={movie.Title} style={movieImageStyle} />
-      <div style={movieTitleStyle}>{movie.Title}</div>
+      <p style={movieTitleStyle}>{movie.Title}</p>
       <div style={movieDetailsStyle}>{`Type: ${movie.Type}`}</div>
-      <div>{`Year: ${movie.Year}`}</div>
+      <div style={movieDetailsStyle}>{`Year: ${movie.Year}`}</div>
     </Link>
     {onRemove && <button onClick={() => onRemove(movie.imdbID)}>Remove</button>}
   </div>
