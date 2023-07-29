@@ -52,7 +52,7 @@ const MovieList = () => {
   const fetchMovies = useCallback(async (page) => {
     setLoading(true);
     try {
-      const response = await axios.get("http://www.omdbapi.com/", {
+      const response = await axios.get("https://www.omdbapi.com/", {
         params: {
           apikey: "a77c8b5d",
           s: "marvel",

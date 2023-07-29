@@ -37,7 +37,7 @@ const MovieDetail = () => {
 
   const fetchMovie = useCallback(async () => {
     const response = await axios.get(
-      "http://www.omdbapi.com/",
+      "https://www.omdbapi.com/",
       {
         params: {
           apikey: 'a77c8b5d',
