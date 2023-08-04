@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState, useCallback } from "react";
 import { MovieContext } from "../context/MovieContext";
 import axios from "axios";
-import Movie from "./Movie";
+import Movie from "../components/Movie";
 import { Link } from "react-router-dom";
 
 const movieListContainerStyle = {
@@ -100,6 +100,8 @@ const MovieList = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+
+  console.log('movis', movies)
 
   return (
     <>

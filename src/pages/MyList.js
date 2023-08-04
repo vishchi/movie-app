@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { MovieContext } from "../context/MovieContext";
-import Movie from "./Movie";
+import Movie from "../components/Movie";
 import { Link } from "react-router-dom";
 
 const MyListContainer = {

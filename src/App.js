@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MovieProvider } from './context/MovieContext';
-import MovieList from "./components/MovieList";
-import MovieDetail from "./components/MovieDetail";
-import MyList from "./components/MyList";
+import MovieList from "./pages/MovieList";
+import MovieDetail from "./pages/MovieDetail";
+import MyList from "./pages/MyList";
 
 function App() {
   return (
